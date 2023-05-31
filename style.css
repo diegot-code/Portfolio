@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Condensed:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: calc(100% - 4rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 47.5rem) {
+  .container {
+    width: min(60rem, 100% - 6rem);
+  }
+}
+
+/* header */
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: blueviolet;
+}
+
+header ul li {
+  border: solid 1px white;
+  padding: 6px 12px;
+  border-radius: 14px;
+}
+
+a#about,
+a#projects,
+a#resume {
+  text-decoration: none;
+  color: rgb(8, 241, 249);
+}
+
+.logo {
+  display: block;
+  color: aquamarine;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+/* Intro */
+
+#intro {
+  background: url(lofi.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* background-image: radial-gradient(rgba(238, 11, 11, 0), rgba(248, 9, 9, 0)),
+    url(lofi.png);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat; */
+}
+
+#intro .container {
+  font-size: clamp(1.25rem, calc(0.9rem + 1.74vw), 2.25rem);
+  color: white;
+}
+
+.intro {
+  display: grid;
+  min-height: 80vh;
+  place-content: center;
+  text-align: center;
+  place-content: center;
+}
+
+h1,
+p.title {
+  font-size: clamp(2rem, 5vw, 5rem);
+  line-height: 1;
+  margin-block: 1px;
+  padding-block: 10px;
+}
+
+a {
+  display: inline-block;
+}
+
+a.btn {
+  display: inline-block;
+  color: rgb(0, 46, 185);
+  text-decoration: none;
+  font-weight: bolder;
+  background-color: magenta;
+  max-width: 200px;
+  margin-inline: auto;
+  padding: 10px 14px;
+  border: solid 2px white;
+}
+
+a.btn:hover {
+  color: aqua;
+  font-weight: normal;
+  background-color: black;
+  cursor: pointer;
+  transition: all 3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+p.title {
+  max-width: 50ch;
+}

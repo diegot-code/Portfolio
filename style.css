@@ -1,0 +1,87 @@
+:root {
+  --primary: aqua;
+  --secondary: red;
+  --tertiary: blue;
+  --quaternary: white;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin-top: -20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url(img/bg_1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  align-items: center;
+  height: 100px;
+}
+
+nav li {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  color: aqua;
+  list-style: none;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav h1 {
+  color: var(--tertiary);
+  cursor: context-menu;
+}
+
+nav h1 span {
+  color: var(--primary);
+}
+
+section.title h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+div.about {
+  display: flex;
+  justify-content: center;
+  margin-top: 14rem;
+}
+
+section.title div.about a {
+  text-decoration: none;
+  color: var(--quaternary);
+  padding: 0;
+  padding: 0.25rem 0.5rem;
+  border: solid var(--quaternary) 2px;
+  border-radius: 10px;
+}
+
+div.about a:hover {
+  color: aquamarine;
+  background-color: rgb(86, 86, 86);
+}

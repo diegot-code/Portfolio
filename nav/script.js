@@ -17,10 +17,22 @@ fetch("https://api.github.com/users/diegot-code/repos")
 
       repoInfoDiv.innerHTML = `<h3>${repo.name}</h3>
       <p class="desc">${repo.description || ""}</p>
-      <p class="language">${repo.language || ""}</p>
+      <ul id="language-${repo.name}"></ul>
       <a href="${repo.html_url}" target="_blank">View on GitHub &rarr; </a>`;
 
       reposContainer.appendChild(repoInfoDiv);
+
+      fetch(repo.languages_url)
+        .then((Response) => Response.json())
+        .then((langData) => {
+          const langList = document.getElementById(`language-${repo.name}`);
+
+          Object.keys(langData).forEach((language) => {
+            const newLanguageEl = document.createElement("li");
+            newLanguageEl.textContent = language;
+            langList.appendChild(newLanguageEl);
+          });
+        });
     }
   })
   .catch((error) => {

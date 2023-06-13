@@ -28,6 +28,51 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 3s;
+
+  animation-name: animate;
+  animation-direction: alternate;
+  animation-duration: 60s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    background-image: url(img/bg_1.png);
+  }
+  10% {
+    background-image: url(img/bg_2.png);
+  }
+  20% {
+    background-image: url(img/bg_3.png);
+  }
+  30% {
+    background-image: url(img/bg_4.png);
+  }
+  40% {
+    background-image: url(img/bg_5.png);
+  }
+  50% {
+    background-image: url(img/bg_7.png);
+  }
+  60% {
+    background-image: url(img/bg_8.png);
+  }
+  70% {
+    background-image: url(img/bg_9.png);
+  }
+  80% {
+    background-image: url(img/bg_10.png);
+  }
+  90% {
+    background-image: url(img/bg_11.png);
+  }
+  100% {
+    background-image: url(img/bg_12.png);
+  }
 }
 
 nav {
@@ -39,16 +84,23 @@ nav {
   height: 100px;
 }
 
+nav ul {
+  display: flex;
+  gap: 8rem;
+}
+
 nav li {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
   padding: 0.5rem 0.75rem;
   color: aqua;
   list-style: none;
+  border: solid var(--tertiary) 2px;
+  border-radius: 20px;
 }
 
-nav ul {
-  display: flex;
+nav li:hover {
+  color: var(--tertiary);
+  background-color: var(--primary);
+  transition: all 5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 nav h1 {
@@ -58,6 +110,10 @@ nav h1 {
 
 nav h1 span {
   color: var(--primary);
+}
+
+nav a {
+  text-decoration: none;
 }
 
 section.title h2 {
@@ -82,6 +138,6 @@ section.title div.about a {
 }
 
 div.about a:hover {
-  color: aquamarine;
-  background-color: rgb(86, 86, 86);
+  color: black;
+  background-color: rgb(139, 0, 0);
 }
